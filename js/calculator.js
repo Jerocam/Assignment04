@@ -1,9 +1,12 @@
+/*eslint-env browser*/
+
 //FUNCTION $ FOR GETTING ID VALUE AS SHORT CODE
 let $ = function(id){
   return document.getElementById(id);};
 
 //FUNCTION INIT FOR HANDLING BUTTONS
 window.onload=function init (){
+  "use strict"
   //NUMBER BUTTONS
   $("nine").onclick = function () {enter(this.value)};
   $("eight").onclick = function() {enter(this.value)};
@@ -29,11 +32,13 @@ window.onload=function init (){
 
 //FUNCTION ENTER FOR GETTING NUMBERS INCLUDE OPERATORS FOR VALUE ON TEXT
 function enter(val){
+  "use strict"
   $("result").value+=val;
 }
 
 //FUNCTION CALCULCATE FOR CALCULATING WITH EVAL RESULTS FROM TEXT THEN PASS THE FINAL VALUE RESULT
 function calculate(){
+  "use strict"
   let x = $("result").value
   let finalResult = eval(x);
   $("result").value = finalResult;
